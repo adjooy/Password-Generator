@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {  
+  // Get DOM elements  
   const lengthSlider = document.getElementById('length');  
   const lengthValue = document.getElementById('lengthValue');  
   const generateButton = document.getElementById('generate');  
@@ -11,12 +12,12 @@ document.addEventListener('DOMContentLoaded', function () {
   const contactButton = document.getElementById('contact-button');  
 
   // Initialize the password length value  
-  let passwordLength = parseInt(lengthSlider.value);  
+  let passwordLength = parseInt(lengthSlider.value, 10);  
   lengthValue.textContent = passwordLength;  
 
   // Update the password length display when the slider changes  
   lengthSlider.addEventListener('input', function () {  
-    passwordLength = parseInt(this.value);  
+    passwordLength = parseInt(this.value, 10);  
     lengthValue.textContent = passwordLength;  
   });  
 
@@ -44,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
     updateHistoryTable();  
   }  
 
-  // Function to update the history table  
+  // Function to update the history display  
   function updateHistoryTable() {  
     const history = JSON.parse(localStorage.getItem('passwordHistory')) || [];  
     historyContent.innerHTML = '';  

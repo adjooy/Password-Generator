@@ -54,7 +54,7 @@ button {
   text-decoration: none;  
   display: inline-block;  
   font-size: 14px;  
-  margin: 5px 0; /* Added vertical margin for better spacing */  
+  margin: 10px 0; /* Added margin for better spacing around all buttons */  
   cursor: pointer;  
   border-radius: 4px;  
   transition: background-color 0.3s ease;  
@@ -83,12 +83,13 @@ button:hover {
 }  
 
 .button-container button {  
+  margin: 5px;
   flex: 1; /* Make buttons grow to fill available space */  
 }  
 
 /* Contact button styles */  
 #contact-button {  
-  background-color: #28a745;  
+  background-color: #28a745;   
 }  
 
 #contact-button:hover {  
@@ -140,17 +141,6 @@ button:hover {
   margin-top: 10px;  
 }  
 
-/* Menu bar styles */  
-.menu-bar {  
-  display: flex;  
-  flex-direction: column; /* Stack buttons vertically */  
-  width: 100%;  
-  margin-bottom: 10px; /* Space below the menu */  
-}  
-
-.menu-bar button {  
-  margin: 5px 0; /* Space between buttons */  
-}  
 
 /* Hidden class */  
 .hidden {  
