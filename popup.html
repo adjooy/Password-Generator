@@ -4,20 +4,38 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>SecurePass Generator</h1>
-  <textarea id="password" readonly></textarea>
-  <br>
-  <button id="copy">Copy</button>
-  <br>
-  <label for="length">Password Length: <span id="lengthValue">12</span></label>
-  <input type="range" id="length" min="6" max="50" value="12" step="1">
-  <br>
-  <button id="generate">Generate New Password</button>
-  <br>
-  <div id="developer-info">
-    <p>If you have any questions or need support</p>
-    <button id="contact-button" onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=adjooy@gmail.com', '_blank');">Contact Me</button>
+  <div id="password-view">
+    <h1>SecurePass Generator</h1>
+    <label for="length">Password Length: <span id="lengthValue">12</span></label>
+    <input type="range" id="length" min="5" max="50" value="12" step="1">
+    <br>
+    <button id="generate">Generate Password</button>
+    <br>
+    <textarea id="password" readonly></textarea>
+    <br>
+    <div class="button-container">
+      <button id="copy">Copy</button>
+      <button id="history-button">Show History</button>
+      <button id="contact-button" onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=adjooy@gmail.com', '_blank');">Contact Me</button>
+    </div>
   </div>
+
+  <div id="history-view" class="hidden">
+    <h1>Password History</h1>
+    <table id="history-table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Password</th>
+        </tr>
+      </thead>
+      <tbody id="history-content"></tbody>
+    </table>
+    <button id="clear-history-button">Clear History</button>
+    <button id="back-button">Back</button>
+  </div>
+
   <script src="popup.js"></script>
 </body>
 </html>
