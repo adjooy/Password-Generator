@@ -9,6 +9,11 @@
     <label for="length">Password Length: <span id="lengthValue">12</span></label>
     <input type="range" id="length" min="5" max="50" value="12" step="1">
     <br>
+    <label><input type="checkbox" id="uppercase" checked> Uppercase</label>
+    <label><input type="checkbox" id="lowercase" checked> Lowercase</label>
+    <label><input type="checkbox" id="numbers" checked> Numbers</label>
+    <label><input type="checkbox" id="symbols" checked> Symbols</label>
+    <br>
     <button id="generate">Generate Password</button>
     <br>
     <textarea id="password" readonly></textarea>
@@ -34,19 +39,6 @@
     <button id="clear-history-button">Clear History</button>
     <button id="back-button" class="back-button">Back</button>
   </div>
-
-
-  <div id="password-settings-view" class="hidden">
-    <h2>Password Management</h2>
-    <label for="symbol-percentage">Symbol Percentage: <span id="symbolValue">10</span>%</label>
-    <input type="range" id="symbol-percentage" min="0" max="100" value="10" step="1">
-    <br>
-    <label for="number-percentage">Number Percentage: <span id="numberValue">10</span>%</label>
-    <input type="range" id="number-percentage" min="0" max="100" value="10" step="1">
-    <br>
-    <button class="back-button">Back</button>
-  </div>
-
 
   <script src="popup.js"></script>
 </body>

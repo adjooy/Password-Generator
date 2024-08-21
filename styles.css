@@ -27,9 +27,9 @@ label {
 }
 
 textarea {
-  width: 100%; /* Full width to match button */
+  width: 90%; /* Full width to match button */
   height: 50px; /* Set a fixed height */
-  margin-top: 10px;
+  margin: 10px;
   font-size: 16px;
   padding: 5px;
   border: 2px solid #007bff;
@@ -53,16 +53,6 @@ button:hover {
   background-color: #0056b3;
 }
 
-#menu-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 18px;
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  color: #007bff;
-}
 
 .hidden {
   display: none;
@@ -84,19 +74,6 @@ button:hover {
   color: white;
 }
 
-.menu-item {
-  background-color: #007bff;
-  color: white;
-  padding: 10px;
-  margin-bottom: 10px;
-  text-align: center;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.menu-item:hover {
-  background-color: #0056b3;
-}
 
 .back-button {
   margin-top: 20px;
@@ -105,4 +82,28 @@ button:hover {
 
 #symbol-percentage, #number-percentage {
   width: 100%;
+}
+
+/* Styles for horizontal checkbox options */
+.checkbox-container {
+  display: flex;
+  justify-content: space-between; /* Space checkboxes evenly */
+  width: 100%;
+  margin-top: 10px;
+}
+
+.checkbox-container label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 10px; /* Space between checkboxes */
+}
+
+.checkbox-container input[type="checkbox"] {
+  margin-right: 5px; /* Space between checkbox and label text */
+}
+
+.checkbox-container input[type="checkbox"]:checked + span {
+  color: #007bff; /* Change label color when checkbox is checked */
 }
