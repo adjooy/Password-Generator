@@ -16,7 +16,6 @@
     <div class="button-container">
       <button id="copy">Copy</button>
       <button id="history-button">Show History</button>
-      <button id="contact-button" onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=adjooy@gmail.com', '_blank');">Contact Me</button>
     </div>
   </div>
 
@@ -33,10 +32,21 @@
       <tbody id="history-content"></tbody>
     </table>
     <button id="clear-history-button">Clear History</button>
-    <button id="back-button">Back</button>
+    <button id="back-button" class="back-button">Back</button>
   </div>
 
-  
+
+  <div id="password-settings-view" class="hidden">
+    <h2>Password Management</h2>
+    <label for="symbol-percentage">Symbol Percentage: <span id="symbolValue">10</span>%</label>
+    <input type="range" id="symbol-percentage" min="0" max="100" value="10" step="1">
+    <br>
+    <label for="number-percentage">Number Percentage: <span id="numberValue">10</span>%</label>
+    <input type="range" id="number-percentage" min="0" max="100" value="10" step="1">
+    <br>
+    <button class="back-button">Back</button>
+  </div>
+
 
   <script src="popup.js"></script>
 </body>
