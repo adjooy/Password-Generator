@@ -1,142 +1,158 @@
-/* General styles for the popup */
-body {
-  font-family: Arial, sans-serif;
-  width: 300px;
-  padding: 10px;
-  margin: 0;
-  background-color: rgba(173, 216, 230, 0.9); /* Light blue with transparency */
-  color: #333;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  border-radius: 8px; /* Rounded corners */
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center items horizontally */
-}
+/* General styles for the popup */  
+body {  
+  font-family: Arial, sans-serif;  
+  width: 300px;  
+  padding: 10px;  
+  margin: 0;  
+  background-color: rgba(173, 216, 230, 0.9); /* Light blue with transparency */  
+  color: #333;  
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);  
+  border-radius: 8px; /* Rounded corners */  
+  display: flex;  
+  flex-direction: column;  
+  align-items: center; /* Center items horizontally */  
+}  
 
-/* Header styles */
-h1 {
-  font-size: 18px;
-  margin: 0;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #007bff;
-  color: #007bff;
-}
+/* Header styles */  
+h1 {  
+  font-size: 18px;  
+  margin: 0;  
+  padding-bottom: 10px;  
+  border-bottom: 2px solid #007bff;  
+  color: #007bff;  
+}  
 
-/* Textarea styles */
-textarea {
-  width: 100%; /* Full width to match button */
-  height: 50px; /* Increased height for better visibility */
-  padding: 15px; /* Increased padding for better text readability */
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-bottom: 15px; /* Increased margin for better spacing */
-  font-size: 14px;
-  overflow: hidden;
-  word-wrap: break-word;
-  resize: none;
-  background-color: #eaf4f4; /* Light cyan background for textarea */
-  box-sizing: border-box; /* Include padding and border in the width */
-}
+/* Textarea styles */  
+textarea {  
+  width: 100%; /* Full width to match button */  
+  height: 50px; /* Increased height for better visibility */  
+  padding: 15px; /* Increased padding for better text readability */  
+  border: 1px solid #ccc;  
+  border-radius: 4px;  
+  margin-bottom: 15px; /* Increased margin for better spacing */  
+  font-size: 14px;  
+  overflow: hidden;  
+  word-wrap: break-word;  
+  resize: none;  
+  background-color: #eaf4f4; /* Light cyan background for textarea */  
+  box-sizing: border-box; /* Include padding and border in the width */  
+}  
 
-/* Slider styles */
-input[type="range"] {
-  width: 100%; /* Full width */
-  margin: 10px 0;
-}
+/* Slider styles */  
+input[type="range"] {  
+  width: 100%; /* Full width */  
+  margin: 10px 0;  
+}  
 
-/* Button styles */
-button {
-  background-color: #007bff;
-  border: none;
-  color: #fff;
-  padding: 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
-  margin: 5px;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-  width: 100%; /* Full width for buttons */
-}
+/* Button styles */  
+button {  
+  background-color: #007bff;  
+  border: none;  
+  color: #fff;  
+  padding: 10px;  
+  text-align: center;  
+  text-decoration: none;  
+  display: inline-block;  
+  font-size: 14px;  
+  margin: 5px 0; /* Added vertical margin for better spacing */  
+  cursor: pointer;  
+  border-radius: 4px;  
+  transition: background-color 0.3s ease;  
+  width: 100%; /* Full width for buttons */  
+}  
 
-button:hover {
-  background-color: #0056b3;
-}
+button:hover {  
+  background-color: #0056b3;  
+}  
 
-/* Full-width Generate button with different color */
-#generate {
-  background-color: #28a745;
-}
+/* Full-width Generate button with different color */  
+#generate {  
+  background-color: #28a745;  
+}  
 
-#generate:hover {
-  background-color: #218838;
-}
+#generate:hover {  
+  background-color: #218838;  
+}  
 
-/* Button container styles */
-.button-container {
-  display: flex;
-  justify-content: space-between;
-  width: 100%; /* Full width of the popup */
-  box-sizing: border-box; /* Include padding and border in width */
-}
+/* Button container styles */  
+.button-container {  
+  display: flex;  
+  justify-content: space-between;  
+  width: 100%; /* Full width of the popup */  
+  box-sizing: border-box; /* Include padding and border in width */  
+}  
 
-.button-container button {
-  flex: 1; /* Make buttons grow to fill available space */
-}
+.button-container button {  
+  flex: 1; /* Make buttons grow to fill available space */  
+}  
 
-/* Contact button styles */
-#contact-button {
-  background-color: #28a745;
-}
+/* Contact button styles */  
+#contact-button {  
+  background-color: #28a745;  
+}  
 
-#contact-button:hover {
-  background-color: #218838;
-}
+#contact-button:hover {  
+  background-color: #218838;  
+}  
 
-/* History section styles */
-#history-view {
-  margin-top: 15px;
-  width: 100%;
-  border-top: 1px solid #ccc;
-  padding-top: 10px;
-  box-sizing: border-box;
-}
+/* History section styles */  
+#history-view, #analysis-view, #dev-info-view {  
+  margin-top: 15px;  
+  width: 100%;  
+  border-top: 1px solid #ccc;  
+  padding-top: 10px;  
+  box-sizing: border-box;  
+}  
 
-#history-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-}
+#history-table, #analysis-view, #dev-info-view {  
+  width: 100%;  
+}  
 
-#history-table th, #history-table td {
-  padding: 10px;
-  border: 1px solid #ddd;
-  text-align: left;
-}
+#history-table {  
+  border-collapse: collapse;  
+  margin-top: 10px;  
+}  
 
-#history-table th {
-  background-color: #007bff;
-  color: #fff;
-}
+#history-table th, #history-table td {  
+  padding: 10px;  
+  border: 1px solid #ddd;  
+  text-align: left;  
+}  
 
-#history-table tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
+#history-table th {  
+  background-color: #007bff;  
+  color: #fff;  
+}  
 
-#history-table tr:hover {
-  background-color: #ddd;
-}
+#history-table tr:nth-child(even) {  
+  background-color: #f2f2f2;  
+}  
 
-#history-content {
-  font-size: 12px;
-}
+#history-table tr:hover {  
+  background-color: #ddd;  
+}  
 
-#clear-history-button, #back-button {
-  margin-top: 10px;
-}
+#history-content {  
+  font-size: 12px;  
+}  
 
-.hidden {
-  display: none;
+#clear-history-button, #back-button, #dev-back-button, #back-button-history {  
+  margin-top: 10px;  
+}  
+
+/* Menu bar styles */  
+.menu-bar {  
+  display: flex;  
+  flex-direction: column; /* Stack buttons vertically */  
+  width: 100%;  
+  margin-bottom: 10px; /* Space below the menu */  
+}  
+
+.menu-bar button {  
+  margin: 5px 0; /* Space between buttons */  
+}  
+
+/* Hidden class */  
+.hidden {  
+  display: none;  
 }
