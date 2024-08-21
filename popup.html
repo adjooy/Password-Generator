@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>SecurePass Generator</h1>
+  <label for="length">Password Length: <span id="lengthValue">12</span></label>
+  <input type="range" id="length" min="4" max="32" value="12" step="1">
+  <br>
+  <button id="generate">Generate Password</button>
+  <br>
+  <textarea id="password" readonly></textarea>
+  <br>
+  <button id="copy">Copy</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>
