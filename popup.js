@@ -32,3 +32,10 @@ function generatePassword(length) {
 
   return password;
 }
+document.addEventListener('DOMContentLoaded', function() {
+  const contactButton = document.getElementById('contact-button');
+
+  contactButton.addEventListener('click', function() {
+    window.open('https://mail.google.com/mail/?view=cm&fs=1&to=adjooy@gmail.com', '_blank');
+  });
+});
