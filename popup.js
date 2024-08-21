@@ -1,6 +1,9 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const passwordField = document.getElementById('password');
+document.addEventListener('DOMContentLoaded', function () {
+  const lengthInput = document.getElementById('length');
+  const lengthValue = document.getElementById('lengthValue');
+  const passwordOutput = document.getElementById('password');
   const generateButton = document.getElementById('generate');
+  const copyButton = document.getElementById('copy');
 
   // Function to generate a random password
   function generatePassword(length) {
@@ -13,26 +16,30 @@ document.addEventListener('DOMContentLoaded', function() {
     return password;
   }
 
-  // Set initial password length
-  const passwordLength = 12; // Fixed length of 12 characters
+  // Function to update password display
+  function updatePassword() {
+    const length = parseInt(lengthInput.value, 10);
+    const password = generatePassword(length);
+    passwordOutput.value = password;
+  }
 
-  // Generate and display the password when the page is loaded
-  passwordField.textContent = generatePassword(passwordLength);
+  // Set initial password length and generate a password on load
+  const initialLength = Math.floor(Math.random() * (15 - 10 + 1)) + 10;
+  lengthInput.value = initialLength;
+  lengthValue.textContent = initialLength;
+  updatePassword();
 
-  // Generate a new password when the button is clicked
-  generateButton.addEventListener('click', function() {
-    passwordField.textContent = generatePassword(passwordLength);
+  // Update password length display when slider value changes
+  lengthInput.addEventListener('input', function () {
+    lengthValue.textContent = lengthInput.value;
   });
+
+  // Regenerate password on button click
+  generateButton.addEventListener('click', updatePassword);
 
   // Copy password to clipboard
-  document.getElementById('copy').addEventListener('click', function() {
-    navigator.clipboard.writeText(passwordField.textContent)
-      .then(() => alert('Password copied to clipboard'))
-      .catch(err => console.error('Failed to copy password: ', err));
-  });
-
-  // Contact button
-  document.getElementById('contact-button').addEventListener('click', function() {
-    window.open('https://mail.google.com/mail/?view=cm&fs=1&to=adjooy@gmail.com', '_blank');
+  copyButton.addEventListener('click', function () {
+    passwordOutput.select();
+    document.execCommand('copy');
   });
 });
