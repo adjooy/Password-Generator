@@ -107,3 +107,54 @@ button:hover {
 .checkbox-container input[type="checkbox"]:checked + span {
   color: #007bff; /* Change label color when checkbox is checked */
 }
+
+/* Container for the history content */
+#history-content {
+  width: 100%;               /* Take full width */
+  max-height: 400px;         /* Set maximum height for the history container */
+  overflow-y: auto;          /* Enable vertical scrolling if content overflows */
+  background-color: #ffffff; /* Optional: Set a background color for the scrollable area */
+  border: 1px solid #ddd;    /* Optional: Add a border to match the table */
+  border-radius: 5px;        /* Optional: Rounded corners */
+  margin-bottom: 10px;       /* Space between content and other elements */
+  padding: 10px;             /* Inner padding */
+}
+
+#history-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#history-table th, #history-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+#history-table th {
+  background-color: #007bff;
+  color: white;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  width: 100%;
+  margin: 5px 0; /* Vertical spacing between buttons */
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.back-button {
+  margin-top: 20px;
+  background-color: #6c757d;
+}
+
+
